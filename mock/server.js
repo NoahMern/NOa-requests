@@ -13,15 +13,19 @@ class Server {
     filterById(id){
         return this.data.filter(a => a.id == id);
     }
+
+    filterByName(name) {
+        return this.data.filter(a => a.name == name);
+    }
 }
 
 class ProctorDatabase extends Server{
     constructor(file) {
-        parent(file);
+        super(file);
     }
 }
 
-
-const server = new Server('./proc.json');
-
-console.log(server.filterById(7755));
+module.exports = {
+    Server,
+    ProctorDatabase
+}

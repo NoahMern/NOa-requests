@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/style/view.css"/>
+    <link rel="icons-img" src="Addis_Ababa_University_logo.png" />
+    <title>PASo</title>
+  </head>
+  <body>
+    <nav>
+      <!-- <div><p>PASo</p></div> -->
+      <div class="navigation-logo-container">
+        <img
+          src="/img/Addis_Ababa_University_logo.png"
+          class="navigation-logo"
+          alt="PASo logo"
+        />
+      </div>
+      <div>
+        <ul class="navigation-menu">
+          <li><a class="navigation-menu-item" href="#">Dorms</a></li>
+          <li><a class="navigation-menu-item" href="#">Students</a></li>
+          <li><a class="navigation-menu-item" href="#">Incidents</a></li>
+          <li><a class="navigation-menu-item" href="/logout">Logout</a></li>
+        </ul>
+      </div>
+      <!-- <div>
+        <select>
+          <option>Profile</option>
+          <option>Log out</option>
+        </select>
+      </div> -->
+    </nav>
+
+    {{#dorm}}
+    <main class="edit-dorm-info">
+      <div class="form-container">
+        <h1 class="page__title">Dormitory Information</h1>
+        <div class="grid-col-2">
+              <div class="inputs-partition inputs-partition-first">
+                <div class="margin-top form-inputs">
+                  <div>
+                    <img class="icons-img" src="/img/icons8-building-50.png" />
+                    <label for="block" class="info-labels"> Block: {{block}} </label>
+                  </div>
+                
+                <div class="margin-top form-inputs">
+                  <div>
+                    <img class="icons-img" src="/img/icons8-building-50.png" />
+                    <label for="dorm-number" class="info-labels">
+                      Dorm number: {{dorm_number}}
+                    </label>
+                  </div>
+                </div>
+                <div class="margin-top form-inputs">
+                  <div>
+                    <img class="icons-img" src="/img/icons8-building-50.png" />
+                    <label for="stdents" class="info-labels">Number of students: {{num_students}}</label>
+                  </div>
+                </div>
+                <div class="margin-top form-inputs">
+                  <div>
+                    <img class="icons-img" src="/img/icons8-building-50.png" />
+                    <label for="mattress" class="info-labels"> Mattress: {{mattress}} </label>
+                  </div>
+                </div>
+                
+                <div class="margin-top form-inputs">
+                  <div>
+                    <img class="icons-img" src="/img/icons8-building-50.png" />
+                    <label for="chair" class="info-labels"> Chair: {{chair}} </label>
+                  </div>
+                </div>
+                <div class="margin-top form-inputs">
+                  <div>
+                    <img class="icons-img" src="/img/icons8-building-50.png" />
+                    <label for="table" class="info-labels"> Table: {{dtable}} </label>
+                  </div>
+                </div>
+                <div class="margin-top form-inputs">
+                  <div>
+                    <img class="icons-img" src="/img/icons8-building-50.png" />
+                    <label for="bed" class="info-labels"> Bed: {{bed}}</label>
+                  </div>
+                </div>
+                <div class="margin-top form-inputs">
+                  <div>
+                    <img class="icons-img" src="/img/icons8-building-50.png" />
+                    <label for="locker" class="info-labels"> Locker: {{locker}} </label>
+                  </div>
+                </div>
+              </div>
+          </div>
+        
+          </div>
+        <div class="submit-button-container"><br />
+          <a class="submit-button" href="/dorm/edit/{{dorm_number}}">
+          <div class="icon-align">
+            <img src="/img/icons8-edit-32.png" />
+            Edit
+          </div>
+        </a>
+        </div>
+    </main>
+    {{/dorm}}
+    {{^dorm}}
+        <main style="display: flex; justify-content: center; align-items: center; font-size: 20px; color: red; margin-top: 100px;">
+        <span>Dorm does not exist! <a href="/dorms">Do you want to search it?</a></span>
+    {{/dorm}}
+    <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+  </body>
+</html>

@@ -1,0 +1,95 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,400;0,500;0,700;1,500;1,600&family=Noto+Sans:ital,wght@0,300;0,400;0,600;1,700&family=Rethink+Sans:wght@400;500;600;700&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Rethink Sans", sans-serif;
+  color: #353232;
+  background-color: #f2f2f2;
+  font-weight: 600;
+}
+
+nav {
+  background-color: rgba(116, 151, 220, 0.753);
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  padding: 1rem 2rem;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  border-bottom-left-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+}
+
+.navigation-logo {
+  margin-left: 3rem;
+  width: 5rem;
+}
+
+form {
+  display: grid;
+  grid-template-columns: 1fr;
+  width: 20rem;
+  gap: 1rem;
+  margin: 10rem auto;
+}
+
+#btn-login {
+  margin-top: 0.6rem;
+  background-color: #4caf50;
+  color: white;
+  padding: 8px 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+h2 {
+  margin-bottom: 2rem;
+}
+
+.icons {
+  font-size: 1.4rem;
+}
+
+.icon-label {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.label-input {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  font-size: 1.2rem;
+}
+
+input {
+  border: none;
+  border-radius: 3px;
+  padding: 1rem;
+  font-size: 1rem;
+  height: 2.4rem;
+  width: 14rem;
+}
+
+input:focus {
+  outline: 2px solid rgba(116, 151, 220, 0.753);
+  outline-offset: 3px;
+}
+
+footer {
+  text-align: center;
+}
+
+.error {
+  color: red;
+  font-size: 0.8rem;
+  margin-top: 0.5rem;
+}

@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/style/style.css" />
+    <link rel="icons-img" src="/img/Addis_Ababa_University_logo.png" />
+    <title>PASo</title>
+  </head>
+  <body>
+    <nav>
+      <!-- <div><p>PASo</p></div> -->
+      <div class="navigation-logo-container">
+        <img
+          src="/img/Addis_Ababa_University_logo.png"
+          class="navigation-logo"
+          alt="PASo logo"
+        />
+      </div>
+      <div>
+        <ul class="navigation-menu">
+          <li><a class="navigation-menu-item" href="#">Dorms</a></li>
+          <li><a class="navigation-menu-item" href="#">Students</a></li>
+          <li><a class="navigation-menu-item" href="#">Incidents</a></li>
+          <li><a class="navigation-menu-item" href="/logout">Logout</a></li>
+        </ul>
+      </div>
+      <!-- <div>
+        <select>
+          <option>Profile</option>
+          <option>Log out</option>
+        </select>
+      </div> -->
+    </nav>
+
+    {{#dorm}}
+    <main class="edit-dorm-info">
+      <div class="form-container">
+        <h1>Edit Dormitory Information</h1>
+        {{#error}}
+          <div class="error-message">{{error}}</div>
+        {{/error}}
+        <form method="post" action="/dorm/edit">
+          <div class="grid-col-2">
+            <div class="inputs-partition inputs-partition-first">
+              <div class="margin-top form-inputs">
+                <div>
+                  <img class="icons-img" src="/img/icons8-building-50.png" />
+                  <label for="block" class="info-labels"> Block </label>
+                </div>
+                <input
+                  id="block"
+                  name="block"
+                  class="input-space size-of-input"
+                  type="text"
+                  value="{{block}}"
+                  placeholder="ABC/123"
+                  required
+                />
+              </div>
+              <div class="margin-top form-inputs">
+                <div>
+                  <img class="icons-img" src="/img/icons8-building-50.png" />
+                  <label for="dorm-number" class="info-labels">
+                    Dorm number
+                  </label>
+                </div>
+                <input
+                  id="dorm-number"
+                  name="dormNumber"
+                  class="input-space size-of-input"
+                  type="number"
+                  min="0"
+                  placeholder="123"
+                  value="{{dorm_number}}"
+                  required
+                />
+              </div>
+              <div class="margin-top form-inputs">
+                <div>
+                  <img class="icons-img" src="/img/icons8-building-50.png" />
+                  <label for="stdents" class="info-labels">
+                    Number of students</label
+                  >
+                </div>
+                <input
+                  id="students"
+                  name="numStudents"
+                  class="input-space size-of-input"
+                  type="number"
+                  min="0"
+                  placeholder="123"
+                  value="{{num_students}}"
+                  required
+                />
+              </div>
+              <div class="margin-top form-inputs">
+                <div>
+                  <img class="icons-img" src="/img/icons8-building-50.png" />
+                  <label for="mattress" class="info-labels"> Mattress </label>
+                </div>
+                <input
+                  id="mattress"
+                  name="mattress"
+                  class="input-space size-of-input"
+                  type="number"
+                  min="0"
+                  placeholder="123"
+                  value="{{mattress}}"
+                  required
+                />
+              </div>
+            </div>
+            <div class="inputs-partition">
+              <div class="margin-top form-inputs">
+                <div>
+                  <img class="icons-img" src="/img/icons8-building-50.png" />
+                  <label for="chair" class="info-labels"> Chair </label>
+                </div>
+                <input
+                  id="chair"
+                  name="chair"
+                  class="input-space size-of-input"
+                  type="number"
+                  min="0"
+                  placeholder="123"
+                  value="{{chair}}"
+                  required
+                />
+              </div>
+              <div class="margin-top form-inputs">
+                <div>
+                  <img class="icons-img" src="/img/icons8-building-50.png" />
+                  <label for="table" class="info-labels"> Table </label>
+                </div>
+                <input
+                  id="table"
+                  name="table"
+                  class="input-space size-of-input"
+                  type="number"
+                  min="0"
+                  placeholder="123"
+                  value="{{dtable}}"
+                  required
+                />
+              </div>
+              <div class="margin-top form-inputs">
+                <div>
+                  <img class="icons-img" src="/img/icons8-building-50.png" />
+                  <label for="bed" class="info-labels"> Bed </label>
+                </div>
+                <input
+                  id="bed"
+                  name="bed"
+                  class="input-space size-of-input"
+                  type="number"
+                  min="0"
+                  placeholder="123"
+                  value="{{bed}}"
+                  required
+                />
+              </div>
+              <div class="margin-top form-inputs">
+                <div>
+                  <img class="icons-img" src="/img/icons8-building-50.png" />
+                  <label for="locker" class="info-labels"> Locker </label>
+                </div>
+                <input
+                  id="locker"
+                  name="locker"
+                  class="input-space size-of-input"
+                  type="number"
+                  value="{{locker}}"
+                  min="0"
+                  placeholder="123"
+                  required
+                />
+              </div>
+            </div>
+          </div>
+          <div class="submit-button-container">
+            <button class="submit-button">
+              <div class="icon-align">
+                <div><ion-icon name="checkmark"></ion-icon></div>
+                <div>Done</div>
+              </div>
+            </button>
+            <a class="submit-button-exit" href="/dorms">
+              <div class="icon-align">
+                <div><ion-icon name="close"></ion-icon></div>
+                <div>Exit</div>
+              </div>
+            </a>
+          </div>
+        </form>
+      </div>
+    </main>
+    {{/dorm}}
+    {{^dorm}}
+        <main style="display: flex; justify-content: center; align-items: center; font-size: 20px; color: red; margin-top: 100px;">
+        <span>Dorm does not exist! <a href="/dorms">Do you want to search it?</a></span>
+    {{/dorm}}
+    <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+  </body>
+</html>

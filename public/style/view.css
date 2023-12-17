@@ -16,7 +16,6 @@ body {
   font-family: "Rethink Sans", sans-serif;
   color: #353232;
   background-color: #f2f2f2;
-
   font-weight: 600;
 }
 
@@ -110,11 +109,14 @@ input {
   /* border-radius: 50%;
   border-right: 5px solid #ccc; */
 }
+.page__title{
+  text-align: center;
+}
 
 .form-container {
   /* box-shadow: 0px 3px 6px 0rem #ddd; */
-  max-width: 50rem;
-  margin: 4rem auto;
+  max-width: 70rem;
+  margin: 1.5rem auto;
   padding: 2rem;
   /* border-radius: 9px; */
   /* background-color: #fff; */
@@ -125,7 +127,7 @@ input {
 .grid-col-2 {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 0 2rem;
+  /* gap: 0 2rem; */
   margin-top: 2rem;
 }
 
@@ -135,16 +137,17 @@ input {
 
 .form-inputs {
   padding-top: 1.6rem;
-  display: grid;
+  /* display: grid; */
   width: 100%;
-  grid-template-columns: 1fr 2fr;
-  gap: 5px;
+  /* grid-template-columns: 10fr 2fr; */
+  /* gap: 20px; */
 }
 .submit-button-container {
   padding-top: 2rem;
   display: flex;
   gap: 1rem;
   width: 100%;
+  height: 65px;
   justify-content: flex-end;
 }
 .submit-button,
@@ -168,12 +171,6 @@ input {
   align-items: center;
   justify-content: center;
   gap: 5px;
-}
-
-.error-message {
-  color: #d62828;
-  font-size: 0.8rem;
-  padding-top: 0.5rem;
 }
 
 a {

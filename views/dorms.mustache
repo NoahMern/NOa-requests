@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" href="Addis_Ababa_University_logo.png" />
+    <title>PASo - Dorms</title>
+    <link rel="stylesheet" type="text/css" href="style/dorms.css" />
+  </head>
+  <body>
+    <nav>
+      <div class="navigation-logo-container">
+        <img
+          src="img/Addis_Ababa_University_logo.png"
+          class="navigation-logo"
+          alt="PASo logo"
+        />
+      </div>
+      <div>
+        <ul class="navigation-menu">
+          <li><a class="navigation-menu-item" href="#">Dorms</a></li>
+          <li><a class="navigation-menu-item" href="#">Students</a></li>
+          <li><a class="navigation-menu-item" href="#">Incidents</a></li>
+          <li><a class="navigation-menu-item" href="/logout">Logout</a></li>
+        </ul>
+      </div>
+    </nav>
+    <main>
+      <div class="search-bar-container">
+        <div class="search-bar">
+          <input id="search" placeholder="Search dormitory" />
+          <div class="icon-search">
+            <button class="btn-search" id="search-btn">
+              <p>Search</p>
+              <ion-icon name="search"></ion-icon>
+            </button>
+          </div>
+        </div>
+        </div>
+      <section class="dorms-display">
+        <div class="section-display-container">
+          <table>
+            <tr>
+              <th>Dorm Number</th>
+              <th>Block</th>
+              <th>Number of Students</th>
+              <th>Action</th>
+            </tr>
+            {{#dorms}}
+            <tr>
+              <td>{{dorm_number}}</td>
+              <td>{{block}}</td>
+              <td>{{num_students}}</td>
+              <td>
+                <a class="btn-view" href="/dorm/{{dorm_number}}">View</a>
+              </td>
+            </tr>
+            {{/dorms}}
+          </table>
+        </div>
+      </section>
+    </main>
+    <script>
+      const search = document.getElementById("search");
+      const searchBtn = document.getElementById("search-btn");
+      searchBtn.addEventListener("click", () => {
+        const searchValue = search.value;
+        window.location.href = `/dorms?search=${searchValue}`;
+      });
+    </script>
+  </body>
+</html>
+
+<!-- 
+    to be used -------------------------------------
+
+            <label for="search" class="search-label">
+          <div class="icon-search">
+            <ion-icon name="search"></ion-icon>
+          </div>   
+           <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+        </label> -->
